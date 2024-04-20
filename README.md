@@ -93,7 +93,8 @@ Para ingresar al entorno Hive se utiliza el comando:
 Ya dentro del entorno Hive, se puede trabajar con querys y realizar las consultas correspondientes con SQL. Recuerdo que a la hora de hacer un comando sin ";" el mismo contenedor te manda a la siguiente linea de comando
 
 ![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/aacd1f78-fe75-404c-b853-a860170ead11)
-_ Paso 2 Resultados de las consultas usando `show tables;` y `select * from sucursal;` _
+* Paso 2 Resultados de las consultas usando `show tables;` y `select * from sucursal;` *
+
 
 
 
