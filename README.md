@@ -46,10 +46,13 @@ Se copian los archivos csv provistos a HDFS:
 
 Este proceso de creación de la carpeta data y copiado de los archivos, debe poder ejecutarse desde un shell script.
 
-Nota: Busque dfs.blocksize y dfs.replication en <IP_Anfitrion>:9870 para encontrar los valores de tamaño de bloque y factor de réplica respectivamente entre otras configuraciones del sistema Hadoop.
+Nota: Busque dfs.blocksize y dfs.replication en <IP_Anfitrion>:9870 para encontrar los valores de tamaño de bloque y factor de réplica respectivamente (en este caso 3) entre otras configuraciones del sistema Hadoop.
 
+![Paso 1 Archivos en mi HDFS](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/6e13e7ab-b1cd-4401-a1af-cf5e7adbfc10)
 IMAGEN: Paso 1 Archivos en mi HDFS. Asi se muestra luego de entrar por el navegador a <IP_Anfitrion>:9870
 
 ## PASO 2) HIVE
 
 El objetivo de este punto, es aprovechar Hive para definir y crear tablas que reflejen la estructura de los datos CSV almacenados en HDFS, facilitando su consulta y análisis posterior dentro del ecosistema de Big Data.
+
+
