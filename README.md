@@ -52,7 +52,7 @@ Este proceso de creación de la carpeta data y copiado de los archivos, debe pod
 Nota: Busque dfs.blocksize y dfs.replication en <IP_Anfitrion>:9870 para encontrar los valores de tamaño de bloque y factor de réplica respectivamente (en este caso 3) entre otras configuraciones del sistema Hadoop.
 
 ![Paso 1 Archivos en mi HDFS](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/6e13e7ab-b1cd-4401-a1af-cf5e7adbfc10)
-<p style="font-size:10px; font-style:italic;">Paso 1 Archivos en mi HDFS. Asi se muestra luego de entrar por el navegador a <IP_Anfitrion>:9870</p>
+*Paso 1 Archivos en mi HDFS. Asi se muestra luego de entrar por el navegador a <IP_Anfitrion>:9870*
 
 ## PASO 2) HIVE
 
