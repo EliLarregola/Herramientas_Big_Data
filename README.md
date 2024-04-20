@@ -121,6 +121,10 @@ En el script del paso03 se genera una carpeta llamada "data2" la cual contiene l
 *Al ingresar en la pagina de Hadoop a través de la IP, "<IP_Anfitrion>:9870", podremos corroborar la existencia de la carpeta llamada data2.*
 
 
+## PASO 4) SQL
+
+La mejora en la velocidad de consulta que puede proporcionar un índice tiene el costo del procesamiento adicional para crear el índice y el espacio en disco para almacenar las referencias del índice. Se recomienda que los índices se basen en las columnas que utiliza en las condiciones de filtrado. El índice en la tabla puede degradar su rendimiento en caso de que no los esté utilizando. Crear índices en alguna de las tablas cargadas y probar los resultados:
+
 
 
 
