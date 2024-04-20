@@ -28,6 +28,9 @@ Se configura un entorno de HDFS con Docker, luego se crea una carpeta en el cont
   mkdir Datasets
   exit
   sudo docker cp <path><archivo> namenode:/home/Datasets/<archivo>
+
+sudo docker cp Datasets/canaldeventa/CanalDeVenta.csv namenode:/home/Datasets/canaldeventa/CanalDeVenta.csv
+
 ``` 
 
 Para ubicarse en el contenedor namenode utilizo el comando:
@@ -44,7 +47,7 @@ Para corroborar que se creó mi directorio, puedo usar el comando:
 
 Se copian los archivos csv provistos a HDFS:
 
- ``` hdfs dfs -put /home/Datasets/* data ```
+ ``` hdfs dfs -put /home/Datasets/* /data ```
 
 
 Este proceso de creación de la carpeta data y copiado de los archivos, debe poder ejecutarse desde un shell script.
@@ -58,7 +61,7 @@ Nota: Busque dfs.blocksize y dfs.replication en <IP_Anfitrion>:9870 para encontr
 
 El objetivo de este punto, es aprovechar Hive para definir y crear tablas que reflejen la estructura de los datos CSV almacenados en HDFS, facilitando su consulta y análisis posterior dentro del ecosistema de Big Data.
 
-![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/0ce5be59-1726-4c02-94de-6900cca0df87)
+IMAGEN HIVE
 
 En este caso se utiliza el entorno docker-compose-v2.yml. Con el siguiente comando iniciamos un entorno con Hive:
 
@@ -72,6 +75,26 @@ Es importante asegurarse en que parte del directorio estamos ubicados a la hora 
 Para crear tablas en Hive a partir de los csv ingestados en HDFS, en primer lugar se pasa el archivo Paso02.hql al servidor de hive con el siguiente comando:
 
 ``` sudo docker cp ./Paso02.hql hive-server:/opt/ ```
+
+Ingresamos a Hive Server donde ademas podremos corroborar que el archivo se pasó correctamente:
+
+```sudo docker exec -it hive-server bash ```
+
+![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/1e7918c3-43df-46bb-a8e0-02f31cb09bb3)
+
+Una vez dentro tendremos que ejecutar el archivo hql de la siguiente manera y con esto se crearán las tablas:
+
+```hive -f Paso02.hql```
+
+Para ingresar al entorno Hive se utiliza el comando:
+
+```hive```
+
+Ya dentro del entorno Hive, se puede trabajar con querys y realizar las consultas correspondientes con SQL. Recuerdo que a la hora de hacer un comando sin ";" el mismo contenedor te manda a la siguiente linea de comando
+
+![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/aacd1f78-fe75-404c-b853-a860170ead11)
+*Paso 2 Resultados de las consultas usando show tables; y select * from sucursal; *
+
 
 
 
