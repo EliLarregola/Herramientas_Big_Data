@@ -113,6 +113,13 @@ Una vez dentro tendremos que ejecutar el archivo hql de la siguiente manera y co
 
 ```hive -f Paso03.hql```
 
+En el script del paso03 se genera una carpeta llamada "data2" la cual contiene las tablas y dentro de las tablas estaran los archivos con el formato parquet y compresion de tipo snappy.
+
+
+![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/1783011a-59e4-4053-9a51-8551291842f6)
+
+*Al ingresar en la pagina de Hadoop a través de la IP, "<IP_Anfitrion>:9870", podremos corroborar la existencia de la carpeta llamada data2.*
+
 
 
 
