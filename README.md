@@ -96,7 +96,20 @@ Ya dentro del entorno Hive, se puede trabajar con querys y realizar las consulta
 *Paso 2 Resultados de las consultas usando `show tables;` y `select * from sucursal;`* 
 
 
+## PASO 3) FORMATOS DE ALMACENAMIENTO
+El objetivo de este paso es almacenar en formato Parquet + Snappy las tablas creadas en el punto 2 a partir de archivos en formato csv. Tener en cuenta además de aplicar particiones para alguna de las tablas.
 
+En primer lugar se pasa el archivo Paso03.hql al servidor de hive con el siguiente comando:
+
+``` sudo docker cp ./Paso03.hql hive-server:/opt/ ```
+
+Ingresamos a Hive Server donde ademas podremos corroborar que el archivo se pasó correctamente:
+
+```sudo docker exec -it hive-server bash ```
+
+Una vez dentro tendremos que ejecutar el archivo hql de la siguiente manera y con esto se crearán las tablas:
+
+```hive -f Paso03.hql```
 
 
 
