@@ -58,7 +58,7 @@ Nota: Busque dfs.blocksize y dfs.replication en <IP_Anfitrion>:9870 para encontr
 
 El objetivo de este punto, es aprovechar Hive para definir y crear tablas que reflejen la estructura de los datos CSV almacenados en HDFS, facilitando su consulta y análisis posterior dentro del ecosistema de Big Data.
 
-![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/f8d6f250-8272-44a8-adc2-1851532dc1a7)
+![image](https://github.com/EliLarregola/Herramientas_Big_Data/assets/91983204/0ce5be59-1726-4c02-94de-6900cca0df87)
 
 En este caso se utiliza el entorno docker-compose-v2.yml. Con el siguiente comando iniciamos un entorno con Hive:
 
