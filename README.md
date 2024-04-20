@@ -24,7 +24,8 @@ Se configura un entorno de HDFS con Docker, luego se crea una carpeta en el cont
   cd home
   mkdir Datasets
   exit
-  sudo docker cp <path><archivo> namenode:/home/Datasets/<archivo> ```
+  sudo docker cp <path><archivo> namenode:/home/Datasets/<archivo>
+``` 
 
 Para ubicarse en el contenedor namenode utilizo el comando:
 
